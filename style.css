@@ -1,0 +1,155 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cores padrÃ£o */
+:root {
+    --text-color: white;
+    --bg-url-dark: url(./assets/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.5);
+    --highlight-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Modo claro */
+.light {
+    --bg-url-light: url(./assets/3.jpg);
+    --text-color: black;
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos gerais */
+body {
+    background: var(--bg-url-dark) no-repeat top center/cover;
+}
+
+body.light {
+    background: var(--bg-url-light) no-repeat top center/cover;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+#container {
+    width: 360px;
+    margin: 56px auto 0px;
+}
+
+#perfil {
+    text-align: center;
+    padding: 24px;
+}
+
+#perfil img {
+    width: 112px;
+}
+
+#perfil p {
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: -8px;
+}
+
+#switch {
+    width: 32px;
+    height: 32px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+ul li a {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 16px 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-weight: 400;
+    transition: background 0.5s;
+}
+
+ul li a:hover {
+    background: var(--surface-color-hover);
+    border: 1px solid var(--text-color);
+}
+
+#links-sociais {
+    display: flex;
+    gap: 32px;
+}
+#links-sociais a{
+    display: flex;
+    gap: 32px;
+    justify-content: center; 
+    margin-left: 50px; 
+    margin-top: 20px;
+    font-size: 20px;
+}
+footer {
+    padding: 26px 0px;
+    text-align: center; 
+    font-size: 14px;
+}
+
+/* style.css */
+/* ... (seu código anterior) ... */
+
+#botaoModo {
+    position: relative;
+    overflow: hidden;
+    width: 24px; /* Reduz o tamanho do botão para 24px */
+    height: 24px; /* Reduz o tamanho do botão para 24px */
+    border: 0;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    background-color: white;
+}
+
+#botaoModo::before {
+    content: ""; /* Adiciona o conteúdo do pseudo-elemento */
+    position: absolute; /* Posiciona o retângulo dentro do botão */
+    top: 50%; /* Move o retângulo para a metade superior do botão */
+    left: 50%; /* Move o retângulo para a metade esquerda do botão */
+    transform: translate(-50%, -50%); /* Centraliza o retângulo no meio do botão */
+    width: 6px; /* Define o tamanho do retângulo */
+    height: 6px;
+    background-color: black; /* Define a cor do retângulo */
+    border-radius: 2px; /* Define um pequeno arredondamento nas bordas do retângulo */
+}
+
+#botaoModo::after {
+    content: ""; /* Adiciona o conteúdo do pseudo-elemento */
+    position: absolute; /* Posiciona o retângulo dentro do botão */
+    top: 50%; /* Move o retângulo para a metade superior do botão */
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 6px; 
+    height: 6px;
+    background-color: white; 
+    border-radius: 2px; 
+}
+
+
+
